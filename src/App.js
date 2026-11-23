@@ -1,12 +1,17 @@
+import CounterComponent from "./CounterComponent";
+import ListComponent from "./ListComponent";
+import TodoComponent from "./TodoComponent";
+
 import "./App.css";
-import MyFuncComponent from "./MyFuncComponent";
-import MyClassComponent from "./MyClassComponent";
 
 function App() {
   return (
     <div className="App">
-      <MyFuncComponent />
-      <MyClassComponent />
+      <header className="App-header">
+        <ListComponent />
+        <CounterComponent />
+        <TodoComponent />
+      </header>
     </div>
   );
 }
