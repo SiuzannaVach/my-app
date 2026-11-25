@@ -19,13 +19,13 @@ function App() {
         <button onClick={() => setIsShowTimer((prev) => !prev)}>
           Show Timer
         </button>
-        {/* <RenderComponent />
+        {/*  <RenderComponent />
          
         <CounterComponent />
-        <TodoComponent />*
+        <TodoComponent />
         <MyClassComponent />
-        <ListComponent />*/}
-        <MyClass />
+        <ListComponent />
+        <MyClass /> */}
       </header>
     </div>
   );
