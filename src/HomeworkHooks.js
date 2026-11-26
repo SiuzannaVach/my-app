@@ -141,6 +141,19 @@ function Task4() {
     </div>
   );
 }
+// Задача 5: useRef (фокус и блюр)
+function Task5() {
+  const inputRef = useRef(null);
+
+  return (
+    <div>
+      <h3>Задача 5 (useRef)</h3>
+      <input ref={inputRef} type="text" placeholder="Поле для фокуса" />
+      <button onClick={() => inputRef.current.focus()}>Фокус</button>
+      <button onClick={() => inputRef.current.blur()}>Блюр</button>
+    </div>
+  );
+}
 
 // Главный компонент домашнего задания
 function HomeworkHooks() {
@@ -154,6 +167,8 @@ function HomeworkHooks() {
         <Task3 />
         <hr />
         <Task4 />
+        <hr />
+        <Task5 />
       </header>
     </div>
   );
