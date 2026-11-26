@@ -41,15 +41,23 @@ function Task2() {
     </div>
   );
 }
+// Задача 3: useState (случайное имя)
+const names = ["Анна", "Максим", "София", "Артём", "Елена"];
 
-
-
-
-
-
-
-
-
+function Task3() {
+  const [randomName, setRandomName] = useState("");
+  const handleRandomName = () => {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    setRandomName(names[randomIndex]);
+  };
+  return (
+    <div>
+      <h3>Задача 3 (useState)</h3>
+      <button onClick={handleRandomName}>Поприветствовать</button>
+      {randomName && <p>Hello, {randomName}!</p>}
+    </div>
+  );
+}
 
 // Главный компонент домашнего задания
 function HomeworkHooks() {
@@ -59,6 +67,8 @@ function HomeworkHooks() {
         <Task1 />
         <hr />
         <Task2 />
+        <hr />
+        <Task3 />
       </header>
     </div>
   );
