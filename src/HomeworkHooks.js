@@ -18,13 +18,47 @@ function Task1() {
   );
 }
 
+// Задача 2: useLayoutEffect
+function Task2() {
+  const [clicks, setClicks] = useState(0);
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    if (clicks > 0 && containerRef.current) {
+      const p = document.createElement("p");
+      p.textContent = `Новый абзац №${clicks}`;
+      containerRef.current.appendChild(p);
+    }
+  }, [clicks]);
+
+  return (
+    <div>
+      <h3>Задача 2 (useLayoutEffect)</h3>
+      <button onClick={() => setClicks((prev) => prev + 1)}>
+        Добавить абзац
+      </button>
+      <div ref={containerRef}></div>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
 // Главный компонент домашнего задания
 function HomeworkHooks() {
   return (
     <div className="App">
       <header className="App-header">
         <Task1 />
-        {/* Сюда ниже будем добавлять <Task2 />, <Task3 /> и т.д. */}
+        <hr />
+        <Task2 />
       </header>
     </div>
   );
